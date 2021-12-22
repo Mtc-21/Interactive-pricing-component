@@ -1,0 +1,304 @@
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+    * {
+      padding: 0;
+      margin: 0;
+      font-size: 100%;
+      vertical-align: baseline;
+      box-sizing: border-box;
+    }
+
+    *::after,
+    *::before {
+      box-sizing: inherit;
+    }
+
+    :root {
+      --soft-cyan-full-slider-bar: hsl(174, 77%, 80%);
+      --strong-cyan-slider-bkg: hsl(174, 86%, 45%);
+      --light-grayish-red-discount-bkg: hsl(14, 92%, 95%);
+      --light-red-discount-text: hsl(15, 100%, 70%);
+      --pale-blue-cta-text: hsl(226, 100%, 87%);
+      --white-pricing-component-bkg: hsl(0, 0%, 100%);
+      --very-pale-blue-main-bkg: hsl(230, 100%, 99%);
+      --light-grayish-blue-empty-slider-bar: hsl(224, 65%, 95%);
+      --light-grayish-blue-toggle-bkg: hsl(223, 50%, 87%);
+      --grayish-blue-text: hsl(225, 20%, 60%);
+      --dark-desaturated-blue-text-cta-bkg: hsl(227, 35%, 25%);
+
+    }
+
+    html,
+    body {
+      min-height: 100vh;
+    }
+
+    body {
+      font-size: 0.8rem;
+      font-family: 'Manrope', sans-serif;
+      color: var(--grayish-blue-text);
+      display: grid;
+      grid-template-rows: repeat(3, auto);
+      justify-content: center;
+      background-image: url("images/bg-pattern.svg");
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: 100% 40%;
+      background-color: var(--very-pale-blue-main-bkg);
+    }
+
+    header {
+      background-image: url("images/pattern-circles.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1.35fr 0.3fr 1.35fr;
+      padding: 2rem 1rem;
+      background: white;
+      border-radius: 0.5rem;
+      gap: 1rem 0.5rem;
+      box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+    }
+
+    header,
+    main {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 1rem 2rem;
+    }
+
+
+    .pageviewsLabel,
+    .pageviews,
+    .price,
+    .monthBillLabel,
+    .monthBill,
+    .yearBill {
+      margin-bottom: 1rem;
+    }
+
+    .pageviewsLabel,
+    .pageviews,
+    .price,
+    .infor,
+    .btn,
+    hr {
+      grid-column: 1/4;
+    }
+
+    .pageviews {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 100%;
+      height: 0.6rem;
+      background: linear-gradient(90deg, var(--strong-cyan-slider-bkg) 50%, var(--light-grayish-blue-toggle-bkg) 50%);
+      border-radius: 0.5rem;
+    }
+
+    .pageviews::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 2.5rem;
+      height: 2.5rem;
+      background: var(--strong-cyan-slider-bkg);
+      border-radius: 50%;
+      cursor: pointer;
+      background-image: url("images/icon-slider.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      box-shadow: 0.5rem 1rem 2.3rem -0.2rem var(--strong-cyan-slider-bkg);
+      ;
+    }
+
+    .pageviews:hover {
+      opacity: 0.7;
+      transition: opacity .2s;
+    }
+
+    .monthBill {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 3rem;
+      height: 1.5rem;
+      border-radius: 0.8rem;
+      background: var(--light-grayish-blue-toggle-bkg);
+      position: relative;
+      cursor: pointer;
+    }
+
+    .monthBill::before {
+      content: "";
+      position: absolute;
+      top: 0.25rem;
+      left: 0.24rem;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background: white;
+    }
+
+    .monthBill:checked::before {
+      left: 1.70rem;
+    }
+
+    .monthBill:checked {
+      background: var(--strong-cyan-slider-bkg);
+    }
+
+    .discount {
+      display: inline;
+      background: var(--light-grayish-red-discount-bkg);
+      color: var(--light-red-discount-text);
+      border-radius: 0.6rem;
+      padding: 0 0.2rem;
+    }
+
+    .discount span {
+      display: none;
+    }
+
+    .infor {
+      list-style: none;
+      display: block;
+    }
+
+    .infor li {
+      padding: 0.5rem;
+    }
+
+    .infor li::before {
+      content: url("images/icon-check.svg");
+      width: 1rem;
+      margin-right: 0.5rem;
+    }
+
+    .btn {
+      justify-self: center;
+      background: var(--dark-desaturated-blue-text-cta-bkg);
+      padding: 0.8rem 3rem;
+      color: var(--light-grayish-blue-toggle-bkg);
+      text-decoration: none;
+      border-radius: 2rem;
+    }
+
+    h1,
+    .price span {
+      font-weight: 800;
+      color: var(--dark-desaturated-blue-text-cta-bkg);
+    }
+
+    header p {
+      font-size: 1rem;
+    }
+
+    .price {
+      font-size: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.2rem;
+    }
+
+    .price small {
+      font-size: 0.8rem;
+      color: var(--grayish-blue-text);
+    }
+
+    .pageviewsLabel {
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+
+    hr {
+      border-color: hsla(223, 50%, 87%, 0.2);
+      margin-left: -1rem;
+      margin-right: -1rem;
+    }
+
+    .attribution {
+      align-self: center;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    @media (min-width:768px) {
+      body {
+        background-size: 100% 55%;
+      }
+
+      h1 {
+        font-size: 2.1rem;
+      }
+
+      .price {
+        font-size: 2.5rem;
+      }
+
+      .pageviewsLabel {
+        font-size: 0.9rem;
+        font-weight: 800;
+      }
+
+      main {
+        width: 32rem;
+        text-align: justify;
+        gap: 0;
+        padding: 2rem;
+      }
+
+      hr {
+        margin-left: -2rem;
+        margin-right: -2rem;
+      }
+
+      .discount span {
+        display: inline;
+      }
+
+      .monthBillLabel,
+      .yearBill {
+        text-align: center;
+      }
+
+      .pageviewsLabel,
+      .pageviews,
+      .price,
+      .monthBillLabel,
+      .monthBill,
+      .yearBill {
+        margin-bottom: 0;
+      }
+
+      .pageviews,
+      hr {
+        grid-column: 1/4;
+      }
+
+      .pageviewsLabel,
+      .infor {
+        grid-column: 1/2;
+
+      }
+
+      .price {
+        grid-row: 1/2;
+        grid-column: 3/4;
+      }
+
+      .btn {
+        grid-column: 3/4;
+      }
+
+    }

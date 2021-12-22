@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="resets.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <title>Frontend Mentor | Interactive pricing component</title>
+</head>
+
+<body>
+  <header>
+    <h1>Simple, traffic-based pricing</h1>
+    <p>Sign-up for our 30-day trial. No credit card required.</p>
+  </header>
+  <main>
+    <label for="pageviews" class="pageviewsLabel">100K Pageviews</label>
+    <input type="range" name="pageviews" id="pageviews" class="pageviews" min="0" max="4" value="2">
+    <div class="price">
+      <span>$16.00</span>
+      <small>/ month</small>
+    </div>
+    <label for="monthBill" class="monthBillLabel">Monthly Billing</label>
+    <input type="checkbox" name="monthBill" id="monthBill" class="monthBill">
+    <p class="yearBill">Yearly Billing
+      <small class="discount">-25% <span>discount</span></small>
+    </p>
+    <hr>
+    <ul class="infor">
+      <li>Unlimited websites</li>
+      <li>100% data ownership</li>
+      <li>Email reports</li>
+    </ul>
+    <a href="#" class="btn">Start my trial</a>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8"
+      target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Martha Mendoza</a>.
+  </footer>
+</body>
+
+</html>
