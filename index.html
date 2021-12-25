@@ -16,15 +16,16 @@
     <h1>Simple, traffic-based pricing</h1>
     <p>Sign-up for our 30-day trial. No credit card required.</p>
   </header>
-  <main>
-    <label for="pageviews" class="pageviewsLabel">100K Pageviews</label>
-    <input type="range" name="pageviews" id="pageviews" class="pageviews" min="0" max="4" value="2">
-    <div class="price">
-      <span>$16.00</span>
+  <form class="wrapper-form">
+    <p class="pageviewsLabel" aria-live="polite" aria-relevant="text">100K Pageviews</p>
+    <input type="range" name="pageviews" id="pageviews" class="pageviews" min="0" max="4" value="2"
+      aria-label="pageviews">
+    <p class="price">
+      <span aria-live="polite" aria-relevant="text">$16.00</span>
       <small>/ month</small>
-    </div>
+    </p>
     <label for="monthBill" class="monthBillLabel">Monthly Billing</label>
-    <input type="checkbox" name="monthBill" id="monthBill" class="monthBill">
+    <input type="checkbox" name="monthBill" id="monthBill" class="monthBill" value="monthBill">
     <p class="yearBill">Yearly Billing
       <small class="discount">-25% <span>discount</span></small>
     </p>
@@ -34,8 +35,8 @@
       <li>100% data ownership</li>
       <li>Email reports</li>
     </ul>
-    <a href="#" class="btn">Start my trial</a>
-  </main>
+    <input type="button" class="btn" value="Start my trial">
+  </form>
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8"
       target="_blank">Frontend Mentor</a>.
